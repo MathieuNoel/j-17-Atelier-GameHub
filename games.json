@@ -1,5 +1,11 @@
 [
   {
+    "name": "rpg",
+    "title": "Rpg",
+    "cssFile": "rpg.css",
+    "jsFile": "rpg.js"
+  },
+  {
     "name": "fourchette",
     "title": "Jeu de la fourchette",
     "cssFile": null,
@@ -11,4 +17,5 @@
     "cssFile": "diceRoller.css",
     "jsFile": "diceRoller.js"
   }
+
 ]

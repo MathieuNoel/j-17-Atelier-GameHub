@@ -1,20 +1,12 @@
-<!DOCTYPE html>
-<html lang="fr">
 
-<head>
-  <meta charset="UTF-8">
-  <title>GameHub</title>
-  <link rel="stylesheet" href="/css/style.css">
-</head>
-
-<body>
-  <header>
-    <h1>
-      <a href="/">GameHub</a>
-    </h1>
+<%- include('partials/headerT')%>
+<%- include('partials/headerB')%>
     <nav>
-
-
+      
+      <% for(const game of data) { %>        
+        <a href="/game/<%= game.name %>"><%= game.name %></a>
+        <% } %>
+      
     </nav>
   </header>
 
@@ -25,6 +17,4 @@
   <footer>
     
   </footer>
-</body>
-
-</html>
+  <%- include('partials/footer')%>
