@@ -9,6 +9,9 @@ const games = require('../games.json');
 
 // paramétrer mon router
 router.use((req, res, next) => {
+  console.log(req.ip);
+    console.log(req.path);
+    console.log(new Date().toJSON())
     // passer à la future vue (peu importe laquelle c'est) notre tableau de jeux
     res.locals.games = games;
     // passer le relais au prochain router.get()
@@ -17,9 +20,7 @@ router.use((req, res, next) => {
 
 // page d'accueil
 router.get('/', (req, res) => {
-    console.log(req.ip);
-    console.log(req.path);
-    console.log(new Date().toJSON());
+   
     // renvoyer la vue index.ejs au client
     // la méthode render fait 2 choses :
     // 1. elle interprete le code EJS et le transforme en HTML
@@ -42,6 +43,7 @@ router.get('/', (req, res) => {
 // page de jeu
 
 router.get('/game/:name', (req, res) => {
+ 
     // rôle : renvoyer la bonne vue en focntion du jeu précisé dans la route
     
     // récupérer le nom du jeu dans la route
@@ -58,6 +60,7 @@ router.get('/game/:name', (req, res) => {
 })
 
 router.use((req, res) =>{
+ 
     res.status(404).render(`404`);
   });
 
