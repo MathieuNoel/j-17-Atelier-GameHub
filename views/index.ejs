@@ -1,20 +1,6 @@
 
-<%- include('partials/headerT')%>
-<%- include('partials/headerB')%>
-    <nav>
-      
-      <% for(const game of data) { %>        
-        <a href="/game/<%= game.name %>"><%= game.name %></a>
-        <% } %>
-      
-    </nav>
-  </header>
+<%- include('partials/header') %>
 
-  <main>
-    <h3>Index</h3>
-  </main>
+  <h3>Index</h3>
 
-  <footer>
-    
-  </footer>
-  <%- include('partials/footer')%>
+<%- include('partials/footer') %>

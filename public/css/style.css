@@ -58,3 +58,20 @@ h3 {
   text-align: center;
   line-height: 3rem;
 }
+
+.err {
+  text-align: center;
+  color: red;
+  font-size:5em ;
+}
+
+.fail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.troll {
+  width: 50vw;
+  height: 70vh;
+}
